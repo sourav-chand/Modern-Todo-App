@@ -28,17 +28,126 @@ This app allows users to **create, track, update, and delete tasks** across diff
 
 ---
 
-## ⚡ Features Screenshots
+## ⚡ Screenshots
 
-
+*(Add screenshots or GIFs of your app here, e.g. drag-and-drop board UI)*  
 
 ---
 
 ## 💻 Getting Started
 
-### 1️⃣ Clone the repository and setup of frontend
+Follow the steps below to set up both **frontend** and **backend** locally.
+
+---
+
+## 🚀 Frontend Setup
+
+### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/<your-username>/smart-issue-tracker.git
+2️⃣ Move into Frontend Directory
+bash
+Copy code
 cd smart-issue-tracker
+3️⃣ Install Dependencies
+bash
+Copy code
 npm install
+4️⃣ Run Frontend (Development Mode)
+bash
+Copy code
 npm run dev
+The frontend will run on ➜ http://localhost:5173
+
+⚙️ Backend Setup Guide
+This guide explains how to install and run the Smart Issue Tracker Backend built with Node.js, Express, and MongoDB.
+
+🧰 Prerequisites
+Before you start, make sure you have installed:
+
+Node.js (v16 or higher)
+
+npm
+
+MongoDB or MongoDB Atlas
+
+🪜 Installation Steps
+1️⃣ Navigate to Backend Directory
+bash
+Copy code
+cd backend
+2️⃣ Install Dependencies
+bash
+Copy code
+npm install
+This will install all required Node.js packages listed in package.json.
+
+3️⃣ Create Environment File
+Create a new .env file in the backend root directory and add your environment variables:
+
+env
+Copy code
+PORT=5000
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/issue-tracker
+🧩 Replace <username> and <password> with your MongoDB credentials.
+
+4️⃣ Run the Server
+Development Mode (auto-restart with nodemon)
+bash
+Copy code
+npm run dev
+Production Mode
+bash
+Copy code
+npm start
+The backend server will start on ➜ http://localhost:5000
+
+🔗 API Endpoints
+Method	Endpoint	Description
+GET	/api/tasks	Get all tasks
+POST	/api/tasks	Create a new task
+PUT	/api/tasks/:id	Update a task
+DELETE	/api/tasks/:id	Delete a task
+
+🌐 Connecting Frontend & Backend
+In your frontend code (e.g., axios.js), set the base URL:
+
+javascript
+Copy code
+const API = axios.create({
+  baseURL: 'http://localhost:5000/api',
+});
+When deployed, replace with your live backend URL.
+
+📦 Deployment
+Frontend: Vercel, Netlify, or GitHub Pages
+
+Backend: Render, Railway, or Heroku
+
+Update .env and axios base URL before deployment
+
+📝 License
+MIT License © 2025 — Your Name
+
+💡 Future Enhancements
+🔐 User Authentication & Multiple Boards
+
+🗓️ Due Dates and Priorities
+
+🔎 Search and Filters
+
+⚡ Real-Time Collaboration (WebSockets)
+
+yaml
+Copy code
+
+---
+
+Would you like me to **add badges and visuals (like GitHub stars, deploy buttons, tech stack logos, etc.)** to make it look like a professional open-source project?
+
+
+
+
+
+
